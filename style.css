@@ -44,10 +44,11 @@ main {
 .movie {
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 250px;
     background-color: #373b69;
     margin: 1em;
-    flex: 1 1 15%;
+    flex-grow: 1;
+    flex-shrink: 1;
 
     position: relative;
     overflow: hidden;
