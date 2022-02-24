@@ -109,3 +109,16 @@ main {
 .movie:hover .overview {
     transform: translateY(0);
 }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    padding-top: 0;
+}
+
+.footer > small {
+    letter-spacing: 1px;
+    color: #999;
+}
