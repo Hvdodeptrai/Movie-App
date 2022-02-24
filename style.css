@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: #22254b;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+.input{
+    background: transparent;
+    border: 1px solid #22254b;
+    outline: none;
+    padding: .5em 1em;
+    border-radius: 20px;
+    color: #eee;
+    font-size: .8em;
+}
+
+.input::placeholder {
+    color: #7378c5;
+}
+
+.input:focus {
+    background-color: #22254b;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    background-color: #373b69;
+    margin: 1em;
+    flex: 1 1 15%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.movie > img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    padding: 1em;
+    letter-spacing: 1px;
+}
+
+.movie-info > span {
+    padding: .25em .5em;
+    background-color: #22254b;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.movie-info > span.green {
+    background-color: green;
+}
+
+.movie-info > span.red {
+    background-color: red;
+}
+
+.movie-info > span.orange {
+    background-color: orange;
+}
+
+.overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 100%;
+    background-color: white;
+    padding: 1em;
+    overflow: auto;
+
+    transform: translateY(101%);
+    transition: transform .3s ease-in;
+}
+
+.overview::-webkit-scrollbar {
+    display: none;
+}
+
+.overview > h3 {
+    margin-top: 0;
+}
+.movie:hover .overview {
+    transform: translateY(0);
+}
